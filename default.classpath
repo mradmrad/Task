@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="lib" path="C:/Users/HAITHEM/Documents/workspace/taches/swingx-all-1.6.4.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/SMTComponents"/>
+	<classpathentry kind="lib" path="C:/Users/HAITHEM/Documents/workspace/taches/jide-oss-3.4.0-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/HAITHEM/Documents/workspace/taches/postgresql_jdbc.jar"/>
+	<classpathentry kind="lib" path="miglayout15-swing.jar" sourcepath="miglayout-src.zip"/>
+	<classpathentry kind="lib" path="C:/Users/HAITHEM/Documents/workspace/SMTComponents/jars/json-simple-1.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/HAITHEM/Documents/workspace/SMTComponents/jars/miglayout-4.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/HAITHEM/Documents/workspace/SMTComponents/jars/poi-3.10.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/HAITHEM/Documents/workspace/SMTComponents/jars/swingx-all-1.6.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/HAITHEM/Documents/workspace/SMTComponents/jars/swt.jar"/>
+	<classpathentry kind="lib" path="E:/flash/JARS/autocomplete_combobox.jar"/>
+	<classpathentry kind="lib" path="E:/flash/JARS/commons-io-2.4.jar"/>
+	<classpathentry kind="lib" path="E:/flash/JARS/commons-jexl-2.0.jar"/>
+	<classpathentry kind="lib" path="E:/flash/JARS/guava-18.0.jar"/>
+	<classpathentry kind="lib" path="E:/flash/JARS/jasper-jdt-6.0.18.jar"/>
+	<classpathentry kind="lib" path="E:/flash/JARS/jasperreports-0.6.3.jar"/>
+	<classpathentry kind="lib" path="E:/flash/JARS/jasperreports-4.6.0.jar"/>
+	<classpathentry kind="lib" path="E:/flash/JARS/jdatepicker-1.3.2.jar"/>
+	<classpathentry kind="lib" path="E:/flash/JARS/json-simple-1.1.1.jar"/>
+	<classpathentry kind="lib" path="E:/flash/JARS/jxlayer-4.0.jar"/>
+	<classpathentry kind="lib" path="E:/flash/JARS/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="E:/flash/JARS/miglayout-4.0.jar"/>
+	<classpathentry kind="lib" path="E:/flash/JARS/mysql.jdbc_5.1.5.jar"/>
+	<classpathentry kind="lib" path="E:/flash/JARS/poi-3.5-FINAL-sources.jar"/>
+	<classpathentry kind="lib" path="E:/flash/JARS/postgresql_jdbc.jar"/>
+	<classpathentry kind="lib" path="E:/flash/JARS/prompt.jar"/>
+	<classpathentry kind="lib" path="E:/flash/JARS/protege.jar"/>
+	<classpathentry kind="lib" path="E:/flash/JARS/slf4j.jar"/>
+	<classpathentry kind="lib" path="E:/flash/JARS/substance-6.0.jar"/>
+	<classpathentry kind="lib" path="E:/flash/JARS/swingx-all-1.6.4.jar"/>
+	<classpathentry kind="lib" path="E:/flash/JARS/tablefilter-swing-java5-4.5.0-javadoc.jar"/>
+	<classpathentry kind="lib" path="E:/flash/JARS/weblaf-ui-1.28.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
