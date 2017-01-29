@@ -1,3 +1,10 @@
+back_voyage:
+    resource: "@BackBundle/Resources/config/routing/voyage.yml"
+    prefix:   /voyage
+back_pays:
+    resource: "@BackBundle/Resources/config/routing/pays.yml"
+    prefix:   /pays
+
 back_homepage:
     path:     /
     defaults: { _controller: BackBundle:Default:index }

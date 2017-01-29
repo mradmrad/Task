@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{% block page_title %}Sportifs{% endblock %}</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link href="{{ asset('template_vendor/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="{{ asset('template_vendor/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('bundles//framework/css/style.css') }}" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="{{ asset('template_vendor/nprogress/nprogress.css') }}" rel="stylesheet">
+
+
+    <!-- Custom Theme Style -->
+    <link href="{{ asset('custom_input_file/css/custom.fileinput.css') }}" rel="stylesheet">
+    <link href="{{ asset('custom_input_file/css/custom.min.css') }}" rel="stylesheet">
+
+    <!-- jQuery -->
+
+    {% block backoffice_style %}{% endblock %}
+</head>
+
+<body class="nav-md">
+
+<div class="container body">
+    <div class="main_container">
+        <div class="col-md-3 left_col">
+            <div class="left_col scroll-view">
+                <div class="navbar nav_title" style="border: 0;">
+                    {#<a href="{{ path('login') }}" class="site_title"><i class="fa fa-paw"></i> <span>Backoffice AGM</span></a>#}
+                </div>
+
+                <div class="clearfix"></div>
+
+                <!-- menu profile quick info -->
+                <div class="profile">
+                    <div class="profile_pic">
+                        <img src="{{ asset('bundles/framework/images/logo_symfony.png') }}" alt="..." class="img-circle profile_img">
+                    </div>
+                    <div class="profile_info">
+                        <span>Bienvenue,</span>
+                        {#<h2>{{ app.user.username }}</h2>#}
+
+                    </div>
+                </div>
+                <!-- /menu profile quick info -->
+
+                <br />
+
+                <!-- sidebar menu -->
+                <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+                    <div class="menu_section">
+                        <h3>General</h3>
+                        <ul class="nav side-menu">
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-calendar"></i>
+                                    Statistiques
+                                </a>
+                            </li>
+                            {#<li>#}
+                                {#<a href="#">#}
+                                    {#<i class="fa fa-calendar"></i>#}
+                                    {#Réclamations#}
+                                {#</a>#}
+                            {#</li>#}
+                            {#<li>#}
+                                {#<a href="#">#}
+                                    {#<i class="fa fa-calendar"></i>#}
+                                    {#Devis#}
+                                {#</a>#}
+                            {#</li>#}
+
+
+
+                            <li ><a    ><i class="fa fa-list"></i>
+                                    Voyages <span class="fa fa-chevron-down"></span></a>
+
+
+                                <ul class="nav child_menu">
+
+                                    <li>
+                                        <a href="{{ path('voyage_index') }}">
+                                            Voyages
+                                        </a>
+                                    </li>
+                                    {#<li>#}
+                                        {#<a href="#">#}
+                                            {#Evénements#}
+                                        {#</a>#}
+                                    {#</li>#}
+                                    {#<li>#}
+                                    {#<a href="{{ path('document_index') }}">#}
+                                    {#Documents#}
+                                    {#</a>#}
+                                    {#</li>#}
+
+                                    {#<li>#}
+                                        {#<a href="#">#}
+                                            {#Produits#}
+                                        {#</a>#}
+                                    {#</li>#}
+
+                                    {#<li>#}
+                                        {#<a href="#">#}
+                                            {#Categories#}
+                                        {#</a>#}
+                                    {#</li>#}
+                                    {#<li>#}
+                                        {#<a href="#">#}
+                                            {#Clients#}
+                                        {#</a>#}
+                                    {#</li>#}
+
+                                    {#<li>#}
+                                        {#<a href="#">#}
+                                            {#Personnels#}
+                                        {#</a>#}
+                                    {#</li>#}
+                                    {#<li>#}
+                                    {#<a href="{{ path('typeproduit_index') }}">#}
+                                    {#Types des produits#}
+                                    {#</a>#}
+                                    {#</li>#}
+
+                                </ul>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                </div>
+                <!-- /sidebar menu -->
+
+                <!-- /menu footer buttons -->
+                <div class="sidebar-footer hidden-small">
+                    <a data-toggle="tooltip" data-placement="top" title="Settings">
+                        <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+                    </a>
+                    <a data-toggle="tooltip" data-placement="top" title="FullScreen">
+                        <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+                    </a>
+                    <a data-toggle="tooltip" data-placement="top" title="Lock">
+                        <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+                    </a>
+                    <a data-toggle="tooltip" data-placement="top" title="Logout">
+                        <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+                    </a>
+                </div>
+                <!-- /menu footer buttons -->
+            </div>
+        </div>
+
+        <!-- top navigation -->
+        <div class="top_nav">
+            <div class="nav_menu">
+                <nav>
+                    <div class="nav toggle">
+                        <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                    </div>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="">
+                            <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                {#<img src="{{ asset('frontoffice/images/avatar-60x60.png') }}" alt="">{{ app.user.username }}#}
+                                <span class=" fa fa-angle-down"></span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-usermenu pull-right">
+                                <li>
+                                    {#<a href="{{ path('personnel_edit', { 'id': app.user.id }) }}"> #}
+                                    Profile
+                                    {#<span class="badge bg-red pull-right">50%</span>#}
+                                    {#<span>Settings</span>#}
+                                    {#</a>#}
+                                    {#</li>#}
+                                    {#<li>#}
+                                    {#<a href="javascript:;">#}
+                                    {#<span class="badge bg-red pull-right">50%</span>#}
+                                    {#<span>Settings</span>#}
+                                    {#</a>#}
+                                    {#</li>#}
+                                    {#<li><a href="javascript:;">Help</a></li>#}
+                                    {#<li><a href="{{ path('logouttime') }}"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>#}
+                            </ul>
+                        </li>
+
+                        <li role="presentation" class="dropdown">
+                            {#<a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">#}
+                            {#<i class="fa fa-bell"></i>#}
+                            {#<span class="badge bg-green">6</span>#}
+                            {#</a>#}
+                            <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
+                                <li>
+                                    <a>
+                                        <span class="image"><img src="{{ asset('images/img.jpg') }}" alt="Profile Image" /></span>
+                        <span>
+                          <span>John Smith</span>
+                          <span class="time">3 mins ago</span>
+                        </span>
+                        <span class="message">
+                          Film festivals used to be do-or-die moments for movie makers. They were where...
+                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a>
+                                        <span class="image"><img src="{{ asset('images/img.jpg') }}" alt="Profile Image" /></span>
+                        <span>
+                          <span>John Smith</span>
+                          <span class="time">3 mins ago</span>
+                        </span>
+                        <span class="message">
+                          Film festivals used to be do-or-die moments for movie makers. They were where...
+                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a>
+                                        <span class="image"><img src="{{ asset('images/img.jpg') }}" alt="Profile Image" /></span>
+                        <span>
+                          <span>John Smith</span>
+                          <span class="time">3 mins ago</span>
+                        </span>
+                        <span class="message">
+                          Film festivals used to be do-or-die moments for movie makers. They were where...
+                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a>
+                                        <span class="image"><img src="{{ asset('images/img.jpg') }}" alt="Profile Image" /></span>
+                        <span>
+                          <span>John Smith</span>
+                          <span class="time">3 mins ago</span>
+                        </span>
+                        <span class="message">
+                          Film festivals used to be do-or-die moments for movie makers. They were where...
+                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <div class="text-center">
+                                        <a>
+                                            <strong>See All Alerts</strong>
+                                            <i class="fa fa-angle-right"></i>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <!-- /top navigation -->
+
+        <!-- page content -->
+        <div class="right_col" role="main">
+            <div class="">
+                <!--   PAGE CONTENT GOES HERE   -->
+                {% block backoffice_body %}
+                {% endblock %}
+            </div>
+        </div>
+        <!-- /page content -->
+
+        <!-- footer content -->
+        <footer>
+            <div class="pull-right">
+                Backoffice AGM by <a href="https://www.sbc.tn" target="_blank">SBC (Smart Business Challenge)</a>
+            </div>
+            <div class="clearfix"></div>
+        </footer>
+        <!-- /footer content -->
+    </div>
+</div>
+
+
+<script src="{{ asset('template_vendor/jquery/dist/jquery.min.js') }}"></script>
+<script src="{{ asset('bundles/tetranzselect2entity/js/select2entity.js') }}"></script>
+
+<!-- FastClick -->
+<script src="{{ asset('template_vendor/fastclick/lib/fastclick.js') }}"></script>
+<!-- NProgress -->
+<script src="{{ asset('template_vendor/nprogress/nprogress.js') }}"></script>
+
+
+<!-- Custom Theme Scripts -->
+<script src="{{ asset('custom_input_file/js/custom.fileinput.js') }}"></script>
+
+<!-- Bootstrap -->
+<script src="{{ asset('template_vendor/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('custom_input_file/js/custom.min.js') }}"></script>
+
+<script>
+
+
+
+
+    {#function logouttime() {#}
+
+
+
+
+
+    {#$.post('{{ path('logouttime') }}',#}
+
+    {#function (response) {#}
+    {#console.log(JSON.stringify(response))#}
+
+    {#alert('chargement');#}
+
+
+
+
+    {#}#}
+    {#, "json");#}
+
+    {#}#}
+
+</script>
+{% block backoffice_js %}
+{% endblock %}
+</body>
+</html>
